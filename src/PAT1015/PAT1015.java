@@ -1,6 +1,5 @@
 package PAT1015;
 
-import java.util.ArrayList;
 import java.util.Scanner;
 
 /**
@@ -49,11 +48,9 @@ class Students{
                         aStudent.next = thisStudent;
                         return this;
                     }
-                } else if (thisStudent.next == null) {
-                    thisStudent.next = aStudent;
-                    return this;
                 }
             }
+            lastStudent.next = aStudent;
             return this;
         }
     }
@@ -82,19 +79,19 @@ public class PAT1015 {
                 continue;
             }
             else if(aStudent.cScore>=hLine&&aStudent.dScore>=hLine){
-                DCQJ.insert(aStudent);
+                DCQJ = DCQJ.insert(aStudent);
                 numStudents++;
             }
             else if(aStudent.dScore>=hLine&&aStudent.cScore<hLine){
-                DSC.insert(aStudent);
+                DSC = DSC.insert(aStudent);
                 numStudents++;
             }
             else if(aStudent.dScore<hLine&&aStudent.cScore<hLine&&aStudent.dScore>=aStudent.cScore){
-                DCJW.insert(aStudent);
+                DCJW = DCJW.insert(aStudent);
                 numStudents++;
             }
             else{
-                QT.insert(aStudent);
+                QT = QT.insert(aStudent);
                 numStudents++;
             }
         }
