@@ -96,14 +96,18 @@ public class PAT1015 {
             }
         }
         System.out.println(numStudents);
-        for(Students i=DCQJ;i!=null;i=i.next)
-            System.out.println(i.number+" "+i.dScore+" "+i.cScore);
-        for(Students i=DSC;i!=null;i=i.next)
-            System.out.println(i.number+" "+i.dScore+" "+i.cScore);
-        for(Students i=DCJW;i!=null;i=i.next)
-            System.out.println(i.number+" "+i.dScore+" "+i.cScore);
-        for(Students i=QT;i!=null;i=i.next)
-            System.out.println(i.number+" "+i.dScore+" "+i.cScore);
+        if(DCQJ.number!=-1)
+            for(Students i=DCQJ;i!=null;i=i.next)
+                System.out.println(i.number+" "+i.dScore+" "+i.cScore);
+        if(DSC.number!=-1)
+            for(Students i=DSC;i!=null;i=i.next)
+                System.out.println(i.number+" "+i.dScore+" "+i.cScore);
+        if(DCJW.number!=-1)
+            for(Students i=DCJW;i!=null;i=i.next)
+                System.out.println(i.number+" "+i.dScore+" "+i.cScore);
+        if(QT.number!=-1)
+            for(Students i=QT;i!=null;i=i.next)
+                System.out.println(i.number+" "+i.dScore+" "+i.cScore);
     }
 
 }
