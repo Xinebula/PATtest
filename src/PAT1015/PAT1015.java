@@ -6,10 +6,16 @@ import java.util.Scanner;
  * Created by xiny on 2015/1/8.
  */
 class Students{
-    int number =-1;
+    int number;
     int dScore;
     int cScore;
-    Students next = null;
+    Students next;
+    public Students(){
+        number =-1;
+        dScore =0;
+        cScore =0;
+        next = null;
+    }
 
     public Students insert(Students aStudent) {
         if (this.number==-1) {
@@ -56,11 +62,11 @@ class Students{
     }
 }
 public class PAT1015 {
-    static int numStudents = 0;
     public static void main(String[] args){
         int num;
         int lLine;
         int hLine;
+        int numStudents = 0;
         Students DCQJ = new Students();
         Students DSC = new Students();
         Students DCJW = new Students();
